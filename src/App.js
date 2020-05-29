@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
-import './global.css';
-import './App.css';
+import Header from './components/Header';
 
 import empty_avatar from './assets/avatar_empty.jpg'
 
@@ -83,41 +81,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <form>
-          <h2>github profile</h2>
-          <figure>
-            <img src={this.state.avatar_url} alt="" />
-            <figcaption>
-              <div className='profile-infos'>
-                <div className='created-container'>
-                  <strong>Created at: {this.state.createdAt}</strong>
-                  <strong>Updated at: {this.state.updatedAt}</strong>
-                </div>
-                <div className='follow-container'>
-                  <strong>{this.state.followers} Followers</strong>
-                  <strong>{this.state.following} Following</strong>
-                </div>
-              </div>
-              <div className='repos-container'>
-                <strong>{this.state.repositories} Repositories</strong>
-              </div>
-              <div className="personal-infos">
-                <strong>Nome: {this.state.profile_name}</strong>
-                <strong>Username: {this.state.github_username_returned}</strong>
-                <strong className='strong-bio'>{this.state.profile_bio}</strong>
-              </div>
-            </figcaption>
-          </figure>
-          <div className='search-container'>
-            <label htmlFor="">github username</label>
-            <input type="text" name="" id="" value={this.state.github_username}
-              onChange={(e) => this.setState({ github_username: e.target.value })} />
-          </div>
-          <div className="buttons-container">
-            <button onClick={this.searchProfile}>Search</button>
-            <button onClick={this.clearSearch}>Clear</button>
-          </div>
-        </form>
+        <Header/>
       </div>
     );
   }

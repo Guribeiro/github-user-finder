@@ -1,0 +1,101 @@
+@import '../../styles/vars';
+
+
+
+.header{
+    background: darken($primary-color, $amount: 5);
+
+    color: white;
+    a{
+        color: white;
+    }
+
+    nav{
+        width: 98%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-bar{
+            display: inherit;
+            align-items: center;
+            width: 70%;
+
+            .icon-nav{
+                padding: 4px;
+
+                a{
+                    &:hover{
+                        color: darken(white, $amount: 30);
+                    }
+                    
+                }
+            }
+
+            form{
+                width: 300px; 
+                margin: 0 16px;
+
+                input{
+                    width: 100%;
+                    background-color: lighten($primary-color, $amount: 10);
+                    border: none;
+                    line-height: 32px;
+                    padding: 0 12px;
+                    border-radius: 6px;
+                    color: white;
+                    text-transform: capitalize;
+                }
+            }
+
+            ul{
+                margin-left: 24px;
+                display: inherit;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 500px;
+               
+
+                li{
+                    line-height: 32px;
+                    cursor: pointer;
+                    &:hover{
+                        color: darken($color: #fff, $amount: 20);
+                    }
+                }
+            }
+        }
+
+        .nav-options{
+            line-height: 32px;
+            width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                padding: 6px;
+
+                &:hover{
+                    color: darken(white, $amount: 30);
+                }
+            }
+
+            figure{
+                width: 24px;
+                display: flex;
+                align-items: center;
+
+                img{
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+}
+
