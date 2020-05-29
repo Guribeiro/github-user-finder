@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 
+import Routes from './routes.js';
+
 import empty_avatar from './assets/avatar_empty.jpg'
 
 
@@ -82,6 +84,7 @@ class App extends Component {
     return (
       <div className='App'>
         <Header/>
+        <Routes/>
       </div>
     );
   }

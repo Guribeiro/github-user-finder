@@ -1,0 +1,40 @@
+@import "../../styles/vars";
+
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $primary-color;
+
+    .container {
+        width: 90%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        figure {
+            width: 30vw;
+
+            img {
+                width: 100%;
+            }
+        }
+        h1 {
+            cursor: pointer;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 500;
+            span{
+                color: #7DBBE6;
+            }
+        }
+
+        p {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+    }
+}

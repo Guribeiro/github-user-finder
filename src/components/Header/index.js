@@ -16,7 +16,7 @@ class Header extends Component {
                     <div className="nav-bar">
                         <div className="icon-nav">
                             <a href="/">
-                                <AiFillGithub size='42' />
+                                <AiFillGithub size='38' />
                             </a>
                         </div>
                         <form>
