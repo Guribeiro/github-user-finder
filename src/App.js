@@ -84,7 +84,7 @@ class App extends Component {
     return (
       <div className='App'>
         <form>
-          <h2>Search github profile</h2>
+          <h2>github profile</h2>
           <figure>
             <img src={this.state.avatar_url} alt="" />
             <figcaption>
@@ -114,8 +114,8 @@ class App extends Component {
               onChange={(e) => this.setState({ github_username: e.target.value })} />
           </div>
           <div className="buttons-container">
-            <button onClick={this.searchProfile}>Procurar</button>
-            <button onClick={this.clearSearch}>Limpar</button>
+            <button onClick={this.searchProfile}>Search</button>
+            <button onClick={this.clearSearch}>Clear</button>
           </div>
         </form>
       </div>
