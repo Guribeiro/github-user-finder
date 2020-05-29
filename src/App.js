@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
 
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Routes from './routes.js';
 
 import empty_avatar from './assets/avatar_empty.jpg'
@@ -85,6 +86,7 @@ class App extends Component {
       <div className='App'>
         <Header/>
         <Routes/>
+        <Footer/>
       </div>
     );
   }

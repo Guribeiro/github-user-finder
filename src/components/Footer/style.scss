@@ -1,0 +1,60 @@
+@import "../../styles/vars";
+.Footer {
+    background-color: darken($primary-color, $amount: 2);
+    color: white;
+    font-size: 0.8rem;
+
+    .container {
+        width: 95%;
+        max-width: 980px;
+        margin: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .infos {
+            width: 60%;
+            font-size: 1.1rem;
+            margin-top: 32px;
+            line-height: 32px;
+
+            h3 {
+                text-align: center;
+            }
+
+            .infos-techs {
+                margin: 6px 0;
+                width: 100%;
+                font-size: 1rem;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    a {
+                        font-size: 0.9rem;
+                        color: white;
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        transition: 0.2s;
+
+                        &:hover {
+                            color: darken($color: #fff, $amount: 20);
+                        }
+                    }
+                }
+            }
+        }
+        .social {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 8px 0;
+            margin-bottom: 12px;
+        }
+    }
+}

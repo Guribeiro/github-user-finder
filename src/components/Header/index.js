@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import { AiFillGithub } from 'react-icons/ai'
 import { MdNotificationsActive, MdAdd } from 'react-icons/md'
 
+import imgProfile from '../../assets/avatar_empty.jpg';
+
 import './style.scss';
 
-import imgProfile from '../../assets/avatar_empty.jpg';
 
 
 class Header extends Component {
