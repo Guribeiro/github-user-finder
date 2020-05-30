@@ -17,9 +17,9 @@ class Footer extends Component {
             <div className='Footer'>
                 <div className="container">
                     <div className="infos">
-                        <h3>Essa aplicação foi criada por: Gustavo Henrique Ribeiro Dias</h3>
+                        {/*}<h3>Essa aplicação foi criada por: Gustavo Henrique Ribeiro Dias</h3>{*/}
                         <div className="infos-techs">
-                            <span>* Tecnologias utilizadas</span>
+                            <span>Tecnologias utilizadas</span>
                             <ul>
                                 <li>
                                     <a href="/">React Js</a>
