@@ -16,7 +16,7 @@ class Undefined extends Component {
                     </figure>
                     <h1>Sorry, can't find the page...</h1>
                     <Link to='/'>
-                        Click here to go back to Home Page
+                        Click here to go back
                     </Link>
                 </div>
             </div>
