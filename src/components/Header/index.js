@@ -7,8 +7,6 @@ import imgProfile from '../../assets/avatar_empty.jpg';
 
 import './style.scss';
 
-
-
 class Header extends Component {
     render() {
         return (
