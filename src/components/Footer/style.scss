@@ -1,7 +1,8 @@
 @import "../../styles/vars";
+
 .Footer {
     background-color: darken($primary-color, $amount: 2);
-    color: white;
+    color: $font-color;
     font-size: 0.8rem;
     width: 100%;
 
@@ -9,16 +10,15 @@
         width: 95%;
         max-width: 980px;
         margin: auto;
+        border: 1px solid red;
 
-        display: flex;
+        @include flexCenterJust(space-evenly);
         flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
 
         .infos {
+            border: 1px solid red;
             width: 60%;
             font-size: 1.1rem;
-            margin-top: 32px;
             line-height: 32px;
 
             h3 {
@@ -26,14 +26,14 @@
             }
 
             .infos-techs {
+                border: 1px solid red;
                 margin: 6px 0;
                 width: 100%;
                 font-size: 1rem;
 
                 ul {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-evenly;
+                    border: 1px solid red;
+                    @include flexCenterJust(space-evenly);
 
                     a {
                         font-size: 0.9rem;
@@ -50,12 +50,10 @@
             }
         }
         .social {
+            border: 1px solid red;
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
             padding: 8px 0;
-            margin-bottom: 12px;
+            @include flexCenterJust(space-evenly);
         }
     }
 }

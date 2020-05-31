@@ -1,26 +1,22 @@
 @import "../../styles/vars";
 
 .Home {
-    display: flex;
+    @include flexCenter;
     flex-direction: column;
-    align-items: center;
     color: $primary-color;
 
     .container {
         width: 90%;
         height: 100vh;
 
-        display: flex;
+        @include flexCenterJust(space-evenly);
         flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
 
         figure {
-            width: 30vw;         
+            width: 30vw;
 
             img {
                 width: 100%;
-               
             }
         }
         h1 {
@@ -28,21 +24,19 @@
             text-align: center;
             font-size: 3rem;
             font-weight: 500;
-            span{
-                color: #7DBBE6;
-            }
         }
 
-        a{
+        a {
             text-decoration: none;
-            color:$primary-color;
+            color: $primary-color;
             font-size: 1.1rem;
             text-align: center;
             transition: 0.2s;
             line-height: 32px;
 
-            &:hover{
+            &:hover {
                 font-size: 1.2rem;
+                
             }
         }
     }

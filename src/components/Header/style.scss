@@ -1,98 +1,89 @@
-@import '../../styles/vars';
+@import "../../styles/vars";
 
-
-
-.header{
+.header {
     background: darken($primary-color, $amount: 2);
 
     font-size: 0.8rem;
-    color: white;
+    color: $font-color;
     width: 100%;
-    a{
-        color: white;
+    a {
+        color: $font-color;
     }
 
-    nav{
+    nav {
         width: 98%;
         margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
-        .nav-bar{
-            display: inherit;
-            align-items: center;
+        @include flexCenterJust(space-between);
+
+        .nav-bar {
             width: 70%;
+            @include flexCenter;
 
-            .icon-nav{
+            .icon-nav {
                 padding: 6px 0px;
 
-                a{
-                    &:hover{
-                        color: darken(white, $amount: 30);
+                a {
+                    &:hover {
+                        color: darken($font-color, $amount: 30);
                     }
-                    
                 }
             }
 
-            form{
-                width: 300px; 
+            form {
+                
+                width: 300px;
                 margin: 0 16px;
 
-                input{
+                input {
                     width: 100%;
                     background-color: lighten($primary-color, $amount: 10);
                     border: none;
                     line-height: 32px;
                     padding: 0 12px;
                     border-radius: 6px;
-                    color: white;
+                    color: $font-color;
                     text-transform: capitalize;
                 }
             }
 
-            ul{
-                display: inherit;
-                justify-content: space-evenly;
-                align-items: center;
+            ul {
                 width: 500px;
-               
+                @include flexCenterJust(space-evenly);
 
-                li{
+                li {
                     line-height: 32px;
                     font-weight: 500;
                     cursor: pointer;
-                    &:hover{
-                        color: darken($color: #fff, $amount: 20);
+
+                    &:hover {
+                        color: darken($color: $font-color, $amount: 20);
                     }
                 }
             }
         }
 
-        .nav-options{
+        .nav-options {
             line-height: 32px;
             width: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            
-            a{
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                padding: 6px;
 
-                &:hover{
-                    color: darken(white, $amount: 30);
+            @include flexCenterJust(space-evenly);
+        
+            a {
+                @include flexCenterJust(space-evenly);
+                padding: 6px;
+                outline: none;
+
+                &:hover {
+                    color: darken($font-color, $amount: 30);
                 }
             }
 
-            figure{
-                width: 24px;
-                display: flex;
-                align-items: center;
+            figure {
+                width: 26px;
+                @include flexCenter;
 
-                img{
+                img {
                     width: 100%;
                     border-radius: 50px;
                 }
@@ -100,4 +91,3 @@
         }
     }
 }
-

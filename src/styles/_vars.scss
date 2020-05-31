@@ -1,7 +1,22 @@
 
-//Header
 
 //$primary-color: #3d3d3d;
 $primary-color: #24292e;
 
-//Font
+$font-color: #fff;
+
+$font-logo: #7DBBE6;
+
+$border-color: gray;
+
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexCenterJust($just) {
+    display: flex;
+    align-items: center;
+    justify-content: $just
+}

@@ -1,8 +1,7 @@
-@import '../../styles/vars';
+@import "../../styles/vars";
 
-.userProfile{
-
-    .container{
+.userProfile {
+    .container {
         width: 90%;
         max-width: 1380px;
         margin: 30px auto;
@@ -10,104 +9,90 @@
 
         display: flex;
 
-        .profile-infos{
-            
+        .profile-infos {
             height: 100%;
             width: 30%;
 
-            figure{
+            figure {
                 margin: auto;
                 width: 70%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
 
-                img{
+                @include flexCenter;
+                flex-direction: column;
+
+                img {
                     width: 100%;
-                    border: 1px solid lighten(gray, $amount: 30);
+                    border: 1px solid lighten($border-color, $amount: 30);
                 }
 
-                figcaption{
-                    padding: 12px 0;
+                figcaption {
                     width: 100%;
+                    margin-top: 16px;
+                    padding: 12px 0;
+
                     display: inherit;
                     flex-direction: column;
 
-                    strong{
-                        color: $primary-color;
+                    strong {
                         font-size: 1rem;
                         line-height: 28px;
+                        padding: 2px 0;
+                        color: $primary-color;
                     }
 
-                    .name{
-                        font-size: 1.6rem;
+                    .name {
+                        font-size: 1.5rem;
                         font-weight: 500;
                         text-transform: capitalize;
                     }
-                    .username{
-                        font-size: 1.4rem;
+                    .username {
+                        font-size: 1.3rem;
                         font-weight: lighter;
                         color: lighten($primary-color, $amount: 5);
-
                     }
-                   
                 }
             }
         }
 
-        .works-infos{
+        .works-infos {
             width: 90%;
             max-width: 980px;
 
-            display: flex;
+            @include flexCenter;
             flex-direction: column;
-            align-items: center;
-            
 
-            .over-view{
-               
+            .over-view {
                 width: 100%;
                 margin-top: 32px;
 
-                ul{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-evenly;
+                ul {
 
+                    @include flexCenterJust(space-evenly);
                     line-height: 52px;
+                    border-bottom: 1px solid lighten($border-color, $amount: 30);
 
-                    border-bottom: 1px solid lighten(gray, $amount: 30);
-
-                    li{
-                       
+                    li {
                         width: 100%;
                         font-size: 0.9rem;
-                        color: $primary-color;
                         font-weight: 300;
-                        border: 1px solid transparent;
+                        color: $primary-color;
+
+                        border: 2px solid transparent;
                         cursor: pointer;
 
-                        display: flex;
+                        @include flexCenterJust(space-evenly);
                         flex-direction: row;
-                        align-items: center;
-                        justify-content: space-evenly;
 
-
-                        &:hover{
-                            border-bottom: 2px solid darken(gray, $amount: 10);
-                            border-top-left-radius: 20px ;
-                            border-top-right-radius: 20px ;
+                        &:hover {
+                            border-bottom: 2px solid darken($border-color, $amount: 10);
                         }
 
-                        span{
-                           font-weight: 700;
+                        span {
+                            font-weight: 700;
                         }
                     }
                 }
-
-
             }
-
         }
     }
 }
