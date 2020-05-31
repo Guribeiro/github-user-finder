@@ -2,8 +2,7 @@
 
 .header {
     background: darken($primary-color, $amount: 2);
-
-    font-size: 0.8rem;
+    font-size: 1.6rem;
     color: $font-color;
     width: 100%;
     a {
@@ -11,16 +10,22 @@
     }
 
     nav {
-        width: 98%;
+        width: 96%;
+        max-width: 1660px;
         margin: auto;
+        transition: all 400ms linear;
 
         @include flexCenterJust(space-between);
 
         .nav-bar {
-            width: 70%;
+            width: 50%;
             @include flexCenter;
 
+            transition: all 400ms linear;
+            
+
             .icon-nav {
+                
                 padding: 6px 0px;
 
                 a {
@@ -31,15 +36,17 @@
             }
 
             form {
-                
-                width: 300px;
+               
+                width: 90%;
                 margin: 0 16px;
+            
 
                 input {
-                    width: 100%;
+                    font-size: 1.4rem;
+                    width: 90%;
                     background-color: lighten($primary-color, $amount: 10);
                     border: none;
-                    line-height: 32px;
+                    line-height: 3rem;
                     padding: 0 12px;
                     border-radius: 6px;
                     color: $font-color;
@@ -47,12 +54,18 @@
                 }
             }
 
+        }   
             ul {
-                width: 500px;
+                
+                margin-left: 30px;
+                width: 80%;
                 @include flexCenterJust(space-evenly);
 
                 li {
-                    line-height: 32px;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.4rem;
+                    line-height: 3.2rem;
                     font-weight: 500;
                     cursor: pointer;
 
@@ -61,14 +74,27 @@
                     }
                 }
             }
-        }
 
         .nav-options {
-            line-height: 32px;
-            width: 120px;
+            line-height: 3.2rem;
+            width: 30%;
+            
 
             @include flexCenterJust(space-evenly);
-        
+
+            .toggle-nav{
+                
+
+                a{
+                    @include flexCenter;
+                    background: darken($primary-color, $amount: 2);
+                    border: 2px solid white;
+                    border: none;
+                    color: white;
+                }
+                
+            }
+
             a {
                 @include flexCenterJust(space-evenly);
                 padding: 6px;
@@ -80,6 +106,7 @@
             }
 
             figure {
+                
                 width: 26px;
                 @include flexCenter;
 
@@ -88,6 +115,44 @@
                     border-radius: 50px;
                 }
             }
+        }
+    }
+
+
+
+    @media (max-width: 831px) {
+        .nav-bar {
+            font-size: 90%;
+        }
+    }
+
+    @media (max-width: 771px) {
+
+        nav ul{
+            display: none;
+        }
+
+        nav .nav-bar{
+
+            width: 100%;
+        }
+
+        
+
+    }
+
+    @media (max-width: 515px) {
+
+       
+
+        nav .nav-bar{
+
+            width: 70%;
+        }
+
+        nav .nav-options{
+       
+            width: auto;
         }
     }
 }

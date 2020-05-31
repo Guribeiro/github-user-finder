@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { AiFillGithub } from 'react-icons/ai'
 import { MdNotificationsActive, MdAdd } from 'react-icons/md'
+import { GiHamburgerMenu} from 'react-icons/gi'
 
 //import imgProfile from '../../assets/avatar_empty.jpg';
 
@@ -58,14 +59,21 @@ class Header extends Component {
                                 onChange={(e) => this.setState({ github_username: e.target.value })}
                             />
                         </form>
-                        <ul>
-                            <li>Pull requests</li>
-                            <li>Issues</li>
-                            <li>Marketplace</li>
-                            <li>Explore</li>
-                        </ul>
                     </div>
+                    <ul>
+                        <li>Pull requests</li>
+                        <li>Issues</li>
+                        <li>Marketplace</li>
+                        <li>Explore</li>
+                    </ul>
+
                     <div className='nav-options'>
+                        <div className="toggle-nav">
+                            <Link to='/'>
+                                <GiHamburgerMenu size='24'/>
+                            </Link>
+                        </div>
+
                         <Link to='/'>
                             <MdNotificationsActive size='24' />
                         </Link>

@@ -8,23 +8,27 @@
     flex-direction: column;
 
     .container {
-        width: 90%;
+        width: 96%;
+        max-width: 1660px;
+
         height: 100vh;
 
         @include flexCenterJust(space-evenly);
         flex-direction: column;
 
         figure {
-            width: 30vw;
+            width: 30%;
+            max-width: 300px;
+            text-align: center;
 
             img {
-                width: 100%;
+              
+                width: 80%;
             }
         }
         h1 {
             cursor: pointer;
             text-align: center;
-            font-size: 3rem;
             font-weight: 500;
             span {
                 text-transform: uppercase;
@@ -33,7 +37,7 @@
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1.8rem;
             text-align: center;
         }
     }
