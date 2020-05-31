@@ -20,13 +20,9 @@ class UserProfile extends Component {
         this.handleRequest = this.handleRequest.bind(this);
     }
 
-
-
     componentDidMount() {
         const { id } = this.props.match.params
-
         this.handleRequest(id);
-
     }
 
     handleRequest(id) {
@@ -36,8 +32,6 @@ class UserProfile extends Component {
             .then((response) => response.json()
                 .then((json) => {
                     this.setState({ user: json })
-
-                    console.log(json.repos_url)
 
                     fetch(json.repos_url)
                         .then((response) => response.json()
