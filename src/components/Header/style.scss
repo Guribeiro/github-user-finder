@@ -22,10 +22,8 @@
             @include flexCenter;
 
             transition: all 400ms linear;
-            
 
             .icon-nav {
-                
                 padding: 6px 0px;
 
                 a {
@@ -36,10 +34,8 @@
             }
 
             form {
-               
                 width: 90%;
                 margin: 0 16px;
-            
 
                 input {
                     font-size: 1.4rem;
@@ -53,46 +49,40 @@
                     text-transform: capitalize;
                 }
             }
+        }
+        ul {
+            margin-left: 30px;
+            width: 80%;
+            @include flexCenterJust(space-evenly);
 
-        }   
-            ul {
-                
-                margin-left: 30px;
-                width: 80%;
-                @include flexCenterJust(space-evenly);
+            li {
+                width: 100%;
+                text-align: center;
+                font-size: 1.4rem;
+                line-height: 3.2rem;
+                font-weight: 500;
+                cursor: pointer;
 
-                li {
-                    width: 100%;
-                    text-align: center;
-                    font-size: 1.4rem;
-                    line-height: 3.2rem;
-                    font-weight: 500;
-                    cursor: pointer;
-
-                    &:hover {
-                        color: darken($color: $font-color, $amount: 20);
-                    }
+                &:hover {
+                    color: darken($color: $font-color, $amount: 20);
                 }
             }
+        }
 
         .nav-options {
             line-height: 3.2rem;
             width: 30%;
-            
 
             @include flexCenterJust(space-evenly);
 
-            .toggle-nav{
-                
-
-                a{
+            .toggle-nav {
+                a {
                     @include flexCenter;
                     background: darken($primary-color, $amount: 2);
                     border: 2px solid white;
                     border: none;
                     color: white;
                 }
-                
             }
 
             a {
@@ -106,7 +96,6 @@
             }
 
             figure {
-                
                 width: 26px;
                 @include flexCenter;
 
@@ -118,40 +107,34 @@
         }
     }
 
-
-
     @media (max-width: 831px) {
         .nav-bar {
             font-size: 90%;
         }
     }
 
-    @media (max-width: 771px) {
+    @media(min-width: 772px){
+        nav .nav-options .toggle-nav{
+            display: none;
+        }
+    }
 
-        nav ul{
+    @media (max-width: 771px) {
+        nav ul {
             display: none;
         }
 
-        nav .nav-bar{
-
+        nav .nav-bar {
             width: 100%;
         }
-
-        
-
     }
 
     @media (max-width: 515px) {
-
-       
-
-        nav .nav-bar{
-
+        nav .nav-bar {
             width: 70%;
         }
 
-        nav .nav-options{
-       
+        nav .nav-options {
             width: auto;
         }
     }
