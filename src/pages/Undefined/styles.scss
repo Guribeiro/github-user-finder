@@ -1,43 +1,83 @@
 @import "../../styles/vars";
 
-.Home {
+.Undefined {
     @include flexCenter;
     flex-direction: column;
     color: $primary-color;
 
     .container {
-        width: 90%;
+        width: 100%;
+        max-width: 1660px;
+
         height: 100vh;
 
         @include flexCenterJust(space-evenly);
         flex-direction: column;
 
         figure {
-            width: 30vw;
+            width: 50%;
+            min-width: 320px;
+            text-align: center;
 
             img {
                 width: 100%;
             }
         }
-        h1 {
-            cursor: pointer;
+
+        h3 {
+            line-height: 4.2rem;
+            font-size: 4rem;
             text-align: center;
-            font-size: 3rem;
             font-weight: 500;
+            cursor: text;
         }
 
         a {
+            width: 50%;
+            border-radius: 20px;
+            background-color: darken($primary-color, $amount: 2);
             text-decoration: none;
-            color: $primary-color;
-            font-size: 1.1rem;
+            color: $font-color;
+            line-height: 4.6rem;
+            font-size: 1.8rem;
             text-align: center;
-            transition: 0.2s;
-            line-height: 32px;
+            transition: 0.3s;
+            
+            border: none;
 
             &:hover {
-                font-size: 1.2rem;
-                
+                width: 70%;
             }
         }
     }
 }
+
+@media (min-width: 1024px) {
+    .Undefined .container a{
+      
+        max-width: 890px;
+    }
+}
+
+
+
+@media (max-width: 540px) {
+    .Undefined .container h3 {
+        line-height: 3.8rem;
+        font-size: 3.6rem;
+        
+    }
+}
+
+@media (min-width: 320px) {
+    .Undefined .container a{
+        width: 80%;
+    }     
+
+    .Undefined .container figure{
+        min-width: 300px;
+    }
+
+}
+
+

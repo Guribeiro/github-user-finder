@@ -9,14 +9,14 @@ class Undefined extends Component {
 
     render() {
         return (
-            <div className='Home'>
+            <div className='Undefined'>
                 <div className="container">
                     <figure>
                         <img src={octocatUndefined} alt="" />
                     </figure>
-                    <h1>Sorry, can't find the page...</h1>
+                    <h3>Sorry, can't find the page...</h3>
                     <Link to='/'>
-                        Click here to go back
+                        Go Home
                     </Link>
                 </div>
             </div>
