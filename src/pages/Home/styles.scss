@@ -1,14 +1,13 @@
 @import "../../styles/vars";
 
 .Home {
-    width: 100%;
     color: $primary-color;
-
+    font-size: 62.5%;
     @include flexCenter;
     flex-direction: column;
 
     .container {
-        width: 96%;
+        width: 100%;
         max-width: 1660px;
 
         height: 100vh;
@@ -17,19 +16,20 @@
         flex-direction: column;
 
         figure {
-            width: 30%;
-            max-width: 300px;
+            width: 50%;
+            min-width: 320px;
             text-align: center;
 
             img {
-              
-                width: 80%;
+                width: 100%;
             }
         }
-        h1 {
-            cursor: pointer;
+        h3 {
+            line-height: 4.2rem;
+            font-size: 4rem;
             text-align: center;
             font-weight: 500;
+            cursor: text;
             span {
                 text-transform: uppercase;
                 color: $font-logo;
@@ -38,7 +38,20 @@
 
         p {
             font-size: 1.8rem;
+            line-height: 2rem;
             text-align: center;
         }
+    }
+}
+
+@media (max-width: 414px) {
+    .Home .container h3 {
+        line-height: 3.8rem;
+        font-size: 3.6rem;
+    }
+
+    .Home .container p {
+        line-height: 1.8rem;
+        font-size: 1.6rem;
     }
 }

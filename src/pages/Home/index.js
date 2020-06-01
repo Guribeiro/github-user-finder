@@ -27,7 +27,7 @@ class Home extends Component {
                     <figure>
                         <img src={octocat} alt="" />
                     </figure>
-                    <h1>Welcome to the <span>guf</span></h1>
+                    <h3>Welcome to the <span>guf</span></h3>
                     <p>Here you can search for any github profile you want. Check some of its informations and enjoy it.</p>
                 </div>
                 {/*}<Footer/>{*/}
