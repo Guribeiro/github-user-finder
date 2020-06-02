@@ -80,7 +80,7 @@ class Header extends Component {
                         <Link to='/'>
                             <MdAdd size='24' />
                         </Link>
-                        <a href={this.props.profileHtml}>
+                        <a className='profile-img' href={this.props.profileHtml}>
                             <figure>
                                 <img src={this.props.profileImg} alt="" />
                             </figure>
